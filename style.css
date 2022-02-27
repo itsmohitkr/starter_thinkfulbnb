@@ -31,7 +31,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -64,6 +64,16 @@ header {
   color: #fff;
 }
 
+header nav{
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul{
+  display: flex;
+  padding-left: 0px;
+}
+
 header nav ul li {
   list-style-type: none;
 }
@@ -79,14 +89,27 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+/* About */
+
+
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  margin-top: 20px;
 }
 
 form label {
   font-weight: bold;
+}
+
+.form-item{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
 }
 
 form select,
@@ -117,3 +140,47 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width:480px) {
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+  }
+  .logo{
+    font-size: 40px;
+  }
+  form{
+    padding: 0;
+  }
+  .form-container{
+    display: flex;
+  }
+  .form-item{
+    display: flex;
+    flex-direction: column;
+  }
+  .group{
+    display: flex;
+    flex-direction: row;
+  }
+  .group .item{
+    flex: 1;
+  }
+  .group .item-double{
+    flex: 2;
+    align-self: center;
+  }
+
+  .ideas-container{
+    display: flex;
+  }
+ 
+  .host-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .host-colum1-item{
+    align-self: center;
+  }
+}
