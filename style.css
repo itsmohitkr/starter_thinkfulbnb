@@ -89,7 +89,6 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-/* About */
 
 
 
@@ -104,6 +103,10 @@ form label {
   font-weight: bold;
 }
 
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
 .form-item{
   display: flex;
   justify-content: space-between;
@@ -150,15 +153,24 @@ footer p {
   .logo{
     font-size: 40px;
   }
+
+  /* form section */
   form{
     padding: 0;
   }
   .form-container{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
   }
-  .form-item{
+  .form-item {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    margin-left:4px;
+    margin-right:4px;
+    padding: 20px;
   }
   .group{
     display: flex;
